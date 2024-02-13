@@ -1,0 +1,48 @@
+<div class="main_container">
+   <br>
+    <div class="container nav_container">
+        <div class="row nav_bar">
+
+            <div class="col-4">
+                <div class="nav_div_img" (click)="toggelColor('all')" [class.active]="active.all"> <img class="nav_img"
+                        src="../assets/all_doc.jpg" alt="">
+                    <h5 style="color:var(--text-color)">All Staff</h5>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="nav_div_img" (click)="toggelColor('therapists')" [class.active]="active.therapists"> <img class="nav_img"
+                        src="../assets/th.jpg" alt="">
+                    <h5 style="color:var(--text-color)">Therapist's </h5>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="nav_div_img" (click)="toggelColor('doctor')" [class.active]="active.doctor"> <img class="nav_img"
+                        src="../assets/md.jpg" alt="">
+                    <h5 style="color:var(--text-color)">Doctor's</h5>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="nav_div_img" (click)="toggelColor('nurses')" [class.active]="active.nurses"> <img class="nav_img"
+                        src="../assets/fd.jpg" alt="">
+                    <h5 style="color:var(--text-color)">Nurse's</h5>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+   
+
+    <div class="container-fluid card_container">
+
+        <br>
+        <div *ngFor="let card of showData">
+            <app-card [cardData]="card"></app-card>
+        </div>
+
+
+    </div>
+</div>

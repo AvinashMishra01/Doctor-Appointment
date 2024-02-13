@@ -1,0 +1,96 @@
+<div class="main_container">
+
+    <div class="container">
+
+        <div class="header">
+            <div>
+                <h3 class="header_title">You are booking {{doctorDetails?.name}} ( A
+                    {{doctorDetails.profession}}) </h3>
+            </div>
+            <div class="doc_img_div">
+                <img class="doc_img" src={{doctorDetails?.image}} alt="Doctor Photo" width="80%">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm text-centet btn btn-primary">
+                <h5 style="color: var(--text-color);">Patient Info</h5>
+            </div>
+        </div>
+
+        <br>
+        <div class="row">
+            <div class="col-sm text-sm-center text-left label">Name<span style="color: red;">*</span> :</div>
+            <div class="col-sm"> <input type="text" class="form-control" [(ngModel)]="patentDetails.name" placeholder="Enter Name"> </div>
+            <div class="col-sm text-sm-center text-left label"> Age<span style="color: red;">*</span> :</div>
+            <div class="col-sm"> 
+                <input class="form-control" type="number" [(ngModel)]="patentDetails.age" placeholder="Enter Age"  #ngInput1 (ngModelChange)="checkValue(ngInput1.value)"></div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm text-sm-center text-left label">Phone Number<span style="color: red;">*</span> :</div>
+
+             <div class="col-sm" style="height: 3.5rem; display: flex; align-items: center;flex-direction: column;">
+
+                <input class="form-control" type="text" [(ngModel)]="patentDetails.ph_no" placeholder="Enter Phone Number" name="phoneNumber" #phoneNumber="ngModel" pattern="^(\+91[\-\s]?)?[0]?(91)?[789]\d{9}$">
+                <ng-container *ngIf="phoneNumber.invalid && (phoneNumber.dirty || phoneNumber.touched)">
+          
+                    <span class="text-danger" *ngIf="phoneNumber.errors.pattern" style="font-size: 0.7rem; margin-top: 1.5px;">
+                      Please enter a valid Indian phone number.
+                    </span>
+
+                </ng-container>
+               
+              </div>
+              
+            <div class="col-sm text-sm-center text-left label"> Birth Date<span style="color: red;">*</span> :</div>
+            <div class="col-sm"> <input class="form-control" type="date" [(ngModel)]="patentDetails.dob" (change)="checkBirthDate(patentDetails.dob)" placeholder="Enter Age"></div>
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col-sm .col-lg .col-md btn btn-primary">
+                <h5 style="color: var(--text-color);">Appointment Information</h5>
+            </div>
+        </div>
+        <br>
+
+        <div class="row text-sm-center">
+            <div class="col-sm .col-md .col-lg date_div">
+               
+                    <div class="col-2 text-sm-center label">Date<span style="color: red;">*</span> : </div>
+                    <div class="col-4"> <input type="date" class="form-control" [(ngModel)]="appointmentDetails.date" (change)="previousBooking()" placeholder="Enter Date"> </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-12 text-center label">Please Select One Time Slot According To Your Need<span style="color: red;">*</span> :-</div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm" *ngFor="let slots of slotsList"> 
+              <div class="form-control slots"  [class.slot_active]="slots.isBooked==true" [class.slot_disabled]="slots.alreadyBooked === true"   (click)="selectedTime(slots)">  {{slots.time}}  </div> 
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm .col-lg .col-md text-sm-center text-left btn btn-primary label">
+                <h5>Please describe the reason for this visit<span style="color: red;">*</span>:-</h5>
+            </div>
+        </div>
+        
+        <br>
+        <div class="row">
+            <div class="col-sm"> <textarea style="resize: none;" class="form-control"
+                    placeholder="Enter Your Des"  [(ngModel)]="appointmentDetails.reason"> </textarea> </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-6 text-end " style="padding: 1.5%;"><button type="button"
+                    class="btn btn-primary" (click)="confirmAppointment()">Confirm</button></div>
+            <div class="col-6" style="padding: 1.5%;"><button type="button" class="btn btn-danger" (click)="cancelAppointment()">Cancel</button></div>
+        </div>
+
+    </div>
+
+</div>

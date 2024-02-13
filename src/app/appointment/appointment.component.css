@@ -1,0 +1,101 @@
+.main_container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.container {
+    /* background-color: var(--appointment-form-color); */
+   
+    border-radius: 4%;
+    padding-bottom:2%;
+
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.header_title {
+    color: var(--text-color);
+}
+
+.doc_img_div {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.doc_img {
+    margin-top: 0.5%;
+    width: 15%;
+    border-radius: 30%;
+}
+
+
+
+.label {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.date_div {
+    display: flex;
+    justify-content: center;
+}
+
+.slots {
+    width: 100%;
+    text-align: center;
+    text-wrap: nowrap;
+    color: black;
+    background-color: white;
+    margin: 1%;
+    cursor: pointer;
+}
+
+.slot_active{
+    background-color: blueviolet;
+    color: var(--text-color);
+}
+
+.slot_disabled{
+    pointer-events: none;
+    cursor: no-drop;
+    background-color: var(--background);
+    color: white;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@media screen and (min-width: 769px) {
+    /* .row > * {
+      padding-left: 0;
+      padding-right: 0%;
+    } */
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

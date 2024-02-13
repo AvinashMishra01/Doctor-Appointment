@@ -1,27 +1,27 @@
-# Doctor-Appointment
-In this project you are not taking real-time data, we are using the json file name data.json  for data.
-  # Main point in project
-You can filter Theripist/ Doctor/ Nurse on the top and can book the appontment.
-if a doc/ the/ nur is booked for any date and any slots then you cann't book again that slot on the same day.
-DOB validation, you cann't choose today's date or future date in this field.
-Mobile No. validation according to indian No.
-Age Validation is also there for 90-100 its asking for sure? and above 120 its give "Not A valid Age". 
+# Appoinment
 
-After filling all the details you can click on Confirm Button. 
-if you select Cancel then you will come on hte home page. 
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.7.
 
+## Development server
 
-# Code running requirement 
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-@angular-cli
-@angular-core
-SweetAllert-2 ( https://www.npmjs.com/package/sweetalert2 )
-BootStrap ( https://medium.com/@technicadil_001/how-to-install-bootstrap-5-in-angular-15-application-bdf4b1dcdad ) 
+## Code scaffolding
 
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
+## Build
 
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
+## Running unit tests
 
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
+## Running end-to-end tests
 
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~bootstrap/dist/css/bootstrap.css";
+
+:root{
+    --background: #030637;
+    --card-color: #3C0753;
+    --button-color: #910A67;
+    --text-color: #ffffff;
+    --appointment-form-color: #720455;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+}

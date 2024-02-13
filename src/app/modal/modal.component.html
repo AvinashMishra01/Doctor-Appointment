@@ -1,0 +1,13 @@
+<div class="modal-overlay">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h2>{{ modalTitle }}</h2>
+        <button (click)="closeModal()">X</button>
+      </div>
+      <div class="modal-body">
+        <!-- Modal content goes here -->
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </div>
+  
