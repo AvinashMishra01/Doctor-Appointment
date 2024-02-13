@@ -40,7 +40,7 @@ getAlreadyBooking(){
 
  async getSpecficProfessionalPreviousBooking(id, date){
   let arr_of_time_id=[];
-  let data=  this.alreadyBooking.filter((item)=> {
+   this.alreadyBooking.filter((item)=> {
     if(item.doctor_id==id && item.date==date){
       arr_of_time_id.push(item.time_id);
       return item
